@@ -60,7 +60,7 @@ Focused first on **Solana/BSC**, with plans to expand to Base/Ethereum.
 
 ---
 
-## **Current Features**
+## **🔬 Main Formulas**
 
 ### **1. Rug Pull Prediction**
 🔍 **AI models for transaction analysis**  
@@ -69,18 +69,19 @@ Focused first on **Solana/BSC**, with plans to expand to Base/Ethereum.
 
 #### **Formula:**
 **Suspicious Transaction Test:**
-
+```javascript
 function isSuspiciousTransaction(transactionVolume, avgVolume) {
   const threshold = 1.5;  // Example threshold for suspicion
   return (transactionVolume / avgVolume) > threshold;
 }
-
+```
 Where:
 > transactionVolume — volume of the current transaction,
 > avgVolume — average transaction volume,
 > threshold — threshold for detecting suspicious activity.
 
 AI Prediction for Rug Pull:
+```
 function predictRugPull(tokenData) {
   const features = [
     tokenData.liquidityChange,
@@ -91,6 +92,7 @@ function predictRugPull(tokenData) {
   const prediction = logisticRegression(features);
   return prediction > 0.5 ? "High Risk" : "Low Risk";  // Risk of rug-pull
 }
+```
 Where:
 > features — token features (e.g., liquidity changes, unusual transactions),
 > logisticRegression — logistic regression model for prediction.
@@ -99,11 +101,9 @@ Where:
 **⚠️ Instant notifications**
 
 Sends real-time alerts to users about risks associated with specific tokens or projects.
-
 Network activity monitoring for fast reaction to emerging threats.
-
-Formula:
 Alert Threshold:
+```javascript
 function sendAlertIfSuspicious(transaction) {
   const deltaT = Math.abs(transaction.time - previousTransactionTime);
   const deltaP = Math.abs(transaction.price - previousTransactionPrice);
@@ -112,6 +112,7 @@ function sendAlertIfSuspicious(transaction) {
     sendNotification("Suspicious transaction detected!");
   }
 }
+```
 Where:
 > deltaT — change in transaction time,
 > deltaP — change in transaction price,
@@ -121,7 +122,7 @@ Where:
 **📊 Tracking token behaviors**
 Analyzes historical token data to detect suspicious patterns.
 Identifies anomalies in tokens that may indicate fraudulent activities or malicious behavior.
-Formula:
+```javascript
 function analyzeTokenBehavior(tokenHistory) {
   const avgPrice = getAveragePrice(tokenHistory);
   const anomalies = tokenHistory.map(price => Math.abs(price - avgPrice));
@@ -129,6 +130,7 @@ function analyzeTokenBehavior(tokenHistory) {
   const anomalyIndex = anomalies.reduce((sum, anomaly) => sum + anomaly, 0) / tokenHistory.length;
   return anomalyIndex > anomalyThreshold ? "Anomalous Behavior" : "Normal Behavior";
 }
+```
 Where:
 > tokenHistory — historical prices of the token,
 > avgPrice — average token price over the period,
