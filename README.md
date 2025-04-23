@@ -152,6 +152,9 @@ Where:
 - [Chrome Extension](https://chrome.google.com/webstore/detail/...)
 - [Official Website](https://nemesia.tools)
 - [Twitter](https://twitter.com/NemesiaData)
+- [Github](https://github.com/NemesiaData/Nemesia)
+- [Gitbook](https://nemesiadata.gitbook.io/nemesiadata/)
+- [Email] Nemesiadata@gmail.com
 
 ---
 
