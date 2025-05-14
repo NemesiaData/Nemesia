@@ -13,6 +13,24 @@ Designed for speed, clarity, and minimal UI.
 Focused first on **Solana/BSC**, with plans to expand to Base/Ethereum.
 
 ---
+## 🌐 Social Links
+
+- [Chrome Extension](https://chromewebstore.google.com/detail/nemesia/debedjcijbkhamabeemjdhfeafdpamgo)
+- [Official Website](https://nemesiadata.com)
+- [Twitter](https://twitter.com/NemesiaData)
+- [Github](https://github.com/NemesiaData/Nemesia)
+- [Gitbook](https://nemesiadata.gitbook.io/nemesiadata/)
+- [Email] Nemesiadata@gmail.com
+---
+
+## 🧪 Tech Stack
+
+- DexScreener API
+- Vanilla JS + HTML/CSS for extension
+- Python-based ML model
+- Designed for speed and minimal permissions
+
+---
 
 ## **Current Features**
 
@@ -136,25 +154,7 @@ Where:
 > avgPrice — average token price over the period,
 > anomalyThreshold — threshold to flag anomalous behavior.
 
----
 
-## 🧪 Tech Stack
-
-- DexScreener API
-- Vanilla JS + HTML/CSS for extension
-- Python-based ML model (coming)
-- Designed for speed and minimal permissions
-
----
-
-## 🌐 Social Links
-
-- [Chrome Extension](https://chrome.google.com/webstore/detail/...)
-- [Official Website](https://nemesia.tools)
-- [Twitter](https://twitter.com/NemesiaData)
-- [Github](https://github.com/NemesiaData/Nemesia)
-- [Gitbook](https://nemesiadata.gitbook.io/nemesiadata/)
-- [Email] Nemesiadata@gmail.com
 
 ---
 
