@@ -130,16 +130,16 @@ def predict_rug_pull(data):
     return "High Risk" if score > 0.6 else "Low Risk"
 ```
 
-**Где:**
-- `liquidity_removed_ratio` — процент удалённой ликвидности  
-- `owner_tx_count` — число подозрительных транзакций от создателя  
-- `token_price_drop_pct` — падение цены токена за короткий промежуток времени  
+**Parameters:**
+- `liquidity_removed_ratio` — the percentage of liquidity removed from the pool  
+- `owner_tx_count` — the number of suspicious transactions made by the token creator  
+- `token_price_drop_pct` — percentage of token price drop within a short time frame  
 
 ---
 
 ### 2. Real-Time Alerts (Transaction Monitor)
 
-Отслеживает всплески активности, цену и движения средств в пределах коротких интервалов времени.
+Monitors spikes in transaction activity, price movement, and fund transfers within short intervals.
 
 **JavaScript Version:**
 ```javascript
@@ -154,16 +154,16 @@ function monitorTransactions(tx, avgTxTime, avgTxValue) {
 }
 ```
 
-**Где:**
-- `tx.value` — объем текущей транзакции  
-- `deltaTime` — время с предыдущей транзакции  
-- `avgTxValue` — средний объем транзакций по токену  
+**Parameters:**
+- `tx.value` — value of the current transaction  
+- `deltaTime` — time difference since the last transaction  
+- `avgTxValue` — average transaction value for the token  
 
 ---
 
 ### 3. Behavior & Liquidity Analysis
 
-Анализирует поведение токена и ключевые переменные: изменение цены, тренд объема, частота min/max касаний.
+Analyzes token behavior and key variables like price changes, volume trends, and volatility.
 
 **Python Version:**
 ```python
@@ -180,15 +180,15 @@ def analyze_token_behavior(history):
         return "✅ Stable Behavior"
 ```
 
-**Метрики:**
-- `volatility` — размах цен (макс - мин)  
-- `volume_spike` — резкий рост объёма последней транзакции по сравнению со средним  
+**Metrics:**
+- `volatility` — price range (max - min)  
+- `volume_spike` — sharp rise in the most recent transaction volume compared to average  
 
 ---
 
 ### 4. Ownership & Mint Risk Detection
 
-Проверка ключевых рисков: открытая минтовка, изменение прав, подозрительные разрешения.
+Checks for major ownership risks such as open minting, unverified tokens, or excessive admin activity.
 
 **JavaScript Version:**
 ```javascript
@@ -201,6 +201,7 @@ function detectOwnershipFlags(token) {
   return flags.length ? flags : ["✅ Ownership looks safe"];
 }
 ```
+
 
 ## 🧾 Conclusion
 
